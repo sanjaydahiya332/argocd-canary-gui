@@ -3,7 +3,7 @@ kind: Rollout
 metadata:
   name: html-rollout
 spec:
-  replicas: 1
+  replicas: 10
   selector:
     matchLabels:
       app: html-app
@@ -28,7 +28,7 @@ spec:
     canary:
       steps:
         - setWeight: 20
-        - pause: { duration: 10s }
+        - pause: { duration: 20s }
         - setWeight: 50
-        - pause: { duration: 10s }
+        - pause: { duration: 20s }
         - setWeight: 100
