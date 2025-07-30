@@ -3,7 +3,7 @@ kind: Rollout
 metadata:
   name: html-rollout
 spec:
-  replicas: 10
+  replicas: 4
   selector:
     matchLabels:
       app: html-app
